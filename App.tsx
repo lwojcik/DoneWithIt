@@ -1,11 +1,14 @@
 import React from 'react';
-import {
-  View,
-} from 'react-native';
 // import AppButton from './app/components/AppButton';
-// import AndroidSafeArea from './components/AndroidSafeArea';
+// import CrossPlatformSafeArea from './app/components/CrossPlatformSafeArea';
 // import WelcomeScreen from './app/screens/WelcomeScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
+// import ViewImageScreen from './app/screens/ViewImageScreen';
+import Screen from './app/components/Screen';
+import Icon from './app/components/Icon';
+import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screens/AccountScreen';
+import ListingsScreen from './app/screens/ListingsScreen';
+// import MessagesScreen from './app/screens/MessagesScreen';
 // import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // import AppText from './app/components/AppText';
@@ -19,7 +22,7 @@ export default function App() {
   // const { landscape } = useDeviceOrientation();
 
   return (
-    <ViewImageScreen />
+    <ListingsScreen />
     // <View style={{
     //   backgroundColor: '#f8f4f4',
     //   padding: 20,

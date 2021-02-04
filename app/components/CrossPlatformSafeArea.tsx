@@ -3,15 +3,14 @@ import React from 'react';
 import {
   StyleSheet,
   SafeAreaView,
-  Platform,
-  StatusBar,
 } from 'react-native';
+import Constants from 'expo-constants';
 
-export default function AndroidSafeArea(props: any) {
+export default function CrossPlatformSafeArea(props: any) {
   return (
     <SafeAreaView
       style={[
-        styles.AndroidSafeArea,
+        styles.CrossPlatformSafeArea,
         props.style,
       ]}
     >
@@ -21,9 +20,7 @@ export default function AndroidSafeArea(props: any) {
 }
 
 const styles = StyleSheet.create({
-  AndroidSafeArea: {
-    paddingTop: Platform.OS === "android"
-      ? StatusBar.currentHeight
-      : 0,
+  CrossPlatformSafeArea: {
+    paddingTop: Constants.statusBarHeight,
   }
 });
