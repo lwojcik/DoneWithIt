@@ -1,28 +1,76 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import AppButton from './app/components/AppButton';
 // import CrossPlatformSafeArea from './app/components/CrossPlatformSafeArea';
 // import WelcomeScreen from './app/screens/WelcomeScreen';
 // import ViewImageScreen from './app/screens/ViewImageScreen';
 import Screen from './app/components/Screen';
-import Icon from './app/components/Icon';
-import ListItem from './app/components/ListItem';
-import AccountScreen from './app/screens/AccountScreen';
-import ListingsScreen from './app/screens/ListingsScreen';
+// import Icon from './app/components/Icon';
+// import ListItem from './app/components/ListItem';
+// import AccountScreen from './app/screens/AccountScreen';
+// import ListingsScreen from './app/screens/ListingsScreen';
+import AppPicker from './app/components/AppPicker';
+import AppTextInput from './app/components/AppTextInput';
 // import MessagesScreen from './app/screens/MessagesScreen';
 // import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+// import AppTextInput from './app/components/AppTextInput';
+// import colors from './app/config/colors';
 
 // import AppText from './app/components/AppText';
 
 // import Card from './app/components/Card';
 // import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
+const categories = [
+  {
+    label: 'Furniture',
+    value: 1,
+
+  },
+  {
+    label: 'Clothing',
+    value: 2,
+    
+  },
+  {
+    label: 'Cameras',
+    value: 3,
+    
+  },
+]
+
 export default function App() {
   // console.log(Dimensions.get('screen'));
   // console.log(useDimensions());
   // const { landscape } = useDeviceOrientation();
 
+  // const [firstName, setFirstName] = useState('');
+
+  // const [ isNew, setIsNew ] = useState(false);
+
+  const [ category, setCategory ] = useState(categories[0]);
+
   return (
-    <ListingsScreen />
+    <Screen>
+      <AppPicker
+        selectedItem={category}
+        onSelectItem={(item: any) => setCategory(item)}
+        items={categories}
+        icon='apps'
+        placeholder='Category'
+      />
+      <AppTextInput
+        icon='email'
+        placeholder='Email'
+      />
+    </Screen>
+    // <Screen>
+    //   <Text>{firstName}</Text>
+    //   <AppTextInput
+    //     placeholder='First Name'
+    //     icon='email'
+    //   />
+    // </Screen>
     // <View style={{
     //   backgroundColor: '#f8f4f4',
     //   padding: 20,
