@@ -5,9 +5,16 @@ import {
 
 import defaultStyles from '../config/styles';
 
-function AppText({ children, style }: any) {
+function AppText({
+  children,
+  style,
+  ...otherProps
+}: any) {
   return (
-    <Text style={[defaultStyles.text, style]}>
+    <Text
+      style={[defaultStyles.text, style]}
+      {...otherProps}
+    >
       {children}
     </Text>
   );

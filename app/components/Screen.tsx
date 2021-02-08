@@ -5,7 +5,7 @@ import CrossPlatformSafeArea from './CrossPlatformSafeArea';
 export default function Screen({ children, style }: any) {
   return (
     <CrossPlatformSafeArea style={[styles.screen, style]}>
-      <View>
+      <View style={[styles.view, style]}>
         {children}
       </View>
     </CrossPlatformSafeArea>
@@ -14,6 +14,9 @@ export default function Screen({ children, style }: any) {
 
 const styles = StyleSheet.create({
   screen: {
+    flex: 1,
+  },
+  view: {
     flex: 1,
   }
 });

@@ -1,11 +1,12 @@
 import React from 'react';
 import { useFormikContext } from 'formik';
 
-import AppTextInput from '../AppTextInput';
+import TextInput from '../TextInput';
 import ErrorMessage from './ErrorMessage';
 
 export default function AppFormField({
   name,
+  width,
   ...otherProps
 }: any) {
   const {
@@ -17,9 +18,10 @@ export default function AppFormField({
 
   return (
     <>
-      <AppTextInput
+      <TextInput
         onBlur={() => setFieldTouched(name)}
         onChangeText={handleChange(name)}
+        width={width}
         {...otherProps}
       />
       <ErrorMessage
