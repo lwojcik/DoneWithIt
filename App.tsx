@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 // import CrossPlatformSafeArea from './app/components/CrossPlatformSafeArea';
 // import WelcomeScreen from './app/screens/WelcomeScreen';
 // import ViewImageScreen from './app/screens/ViewImageScreen';
-import Screen from './app/components/Screen';
+// import Screen from './app/components/Screen';
 // import Icon from './app/components/Icon';
 // import ListItem from './app/components/ListItem';
 // import AccountScreen from './app/screens/AccountScreen';
 // import ListingsScreen from './app/screens/ListingsScreen';
-import AppPicker from './app/components/AppPicker';
-import AppTextInput from './app/components/AppTextInput';
+// import AppPicker from './app/components/AppPicker';
+// import AppTextInput from './app/components/AppTextInput';
+// import LoginScreen from './app/screens/LoginScreen';
 // import MessagesScreen from './app/screens/MessagesScreen';
 // import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -21,23 +22,26 @@ import AppTextInput from './app/components/AppTextInput';
 // import Card from './app/components/Card';
 // import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
-const categories = [
-  {
-    label: 'Furniture',
-    value: 1,
+// const categories = [
+//   {
+//     label: 'Furniture',
+//     value: 1,
 
-  },
-  {
-    label: 'Clothing',
-    value: 2,
+//   },
+//   {
+//     label: 'Clothing',
+//     value: 2,
     
-  },
-  {
-    label: 'Cameras',
-    value: 3,
+//   },
+//   {
+//     label: 'Cameras',
+//     value: 3,
     
-  },
-]
+//   },
+// ]
+
+import RegisterScreen from './app/screens/RegisterScreen';
+import ListingEditScreen from './app/screens/ListingEditScreen';
 
 export default function App() {
   // console.log(Dimensions.get('screen'));
@@ -48,22 +52,23 @@ export default function App() {
 
   // const [ isNew, setIsNew ] = useState(false);
 
-  const [ category, setCategory ] = useState(categories[0]);
+  // const [ category, setCategory ] = useState(categories[0]);
 
   return (
-    <Screen>
-      <AppPicker
-        selectedItem={category}
-        onSelectItem={(item: any) => setCategory(item)}
-        items={categories}
-        icon='apps'
-        placeholder='Category'
-      />
-      <AppTextInput
-        icon='email'
-        placeholder='Email'
-      />
-    </Screen>
+    <ListingEditScreen />
+    // <Screen>
+    //   <AppPicker
+    //     selectedItem={category}
+    //     onSelectItem={(item: any) => setCategory(item)}
+    //     items={categories}
+    //     icon='apps'
+    //     placeholder='Category'
+    //   />
+    //   <AppTextInput
+    //     icon='email'
+    //     placeholder='Email'
+    //   />
+    // </Screen>
     // <Screen>
     //   <Text>{firstName}</Text>
     //   <AppTextInput

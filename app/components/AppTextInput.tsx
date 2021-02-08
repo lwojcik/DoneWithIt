@@ -23,6 +23,7 @@ export default function AppTextInput({
         />
       )}
       <TextInput
+        placeholderTextColor={defaultStyles.colors.medium}
         style={styles.textInput}
         {...otherProps}
       />
