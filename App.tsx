@@ -1,28 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import navigationTheme from './app/navigation/navigationTheme';
 
-// import Screen from './app/components/Screen';
-// import ImageInputList from './app/components/ImageInputList';
-import ListingEditScreen from './app/screens/ListingEditScreen';
+import AppNavigator from './app/navigation/AppNavigator';
 
 export default function App() {
-  const [imageUris, setImageUris] = useState([]) as any;
-
-  const handleAdd = (uri: any) => {
-    setImageUris([...imageUris, uri]);
-  }
-
-  const handleRemove = (uri: any) => {
-    setImageUris(imageUris.filter((imageUri: any) => imageUri !== uri));
-  }
-
   return (
-    <ListingEditScreen />
-    // <Screen>
-    //   <ImageInputList
-    //     imageUris={imageUris}
-    //     onAddImage={handleAdd}
-    //     onRemoveImage={handleRemove}
-    //   />
-    // </Screen>
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }

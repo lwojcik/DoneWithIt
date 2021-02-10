@@ -6,9 +6,11 @@ import {
   View,
   ImageBackground,
 } from 'react-native';
+
+import routes from '../navigation/routes';
 import AppButton from '../components/AppButton';
 
-export default function WelcomeScreen() {
+export default function WelcomeScreen({ navigation }: any) {
   return (
     <ImageBackground
       blurRadius={10}
@@ -23,8 +25,8 @@ export default function WelcomeScreen() {
         <Text style={styles.tagline}>Sell what you don't need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" />
-        <AppButton title="Register" color='secondary' />
+        <AppButton title="Login" onPress={() => navigation.navigate(routes.LOGIN)} />
+        <AppButton title="Register" color='secondary' onPress={() => navigation.navigate(routes.REGISTER)} />
       </View>
     </ImageBackground>
   );
