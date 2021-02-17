@@ -30,6 +30,6 @@ export default function AppFormField({
         visible={(touched as any)[name]}
         error={(errors as any)[name]}
       />
-  </>
+    </>
   )
 }

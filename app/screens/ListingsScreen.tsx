@@ -44,6 +44,7 @@ export default function ListingsScreen({ navigation }: any) {
             subTitle={`$${item.price}`}
             imageUrl={item.images[0].url}
             onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
+            thumbnailUrl={item.images[0].thumbnailUrl}
           />
         )}
       />
@@ -54,6 +55,5 @@ export default function ListingsScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   screen: {
     padding: 20,
-    backgroundColor: colors.light,
   }
 });
